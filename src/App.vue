@@ -28,12 +28,11 @@
     <div>
       <p class="mb-2 text-2xl">Dialogs</p>
       <div>
-        <BaseDialog :visible="dialogVisible" @backdrop-clicked="switchDialog">
+        <MyDialog :visible="dialogVisible" @backdrop-clicked="switchDialog">
           <template #title>
-            ダイアログ
+            <p class="font-bold">ダイアログ</p>
           </template>
           <template #body>
-            本文を記述します
             本文を記述します
             本文を記述します
             本文を記述します
@@ -43,7 +42,7 @@
           <template #footer>
             <div class="flex justify-end"><SecondaryButton @click="switchDialog">close</SecondaryButton></div>
           </template>
-        </BaseDialog>
+        </MyDialog>
       </div>
       <div class="mb-2">
         <PrimaryButton @click="switchDialog">ダイアログ</PrimaryButton>
@@ -56,14 +55,14 @@
 import { defineComponent, ref } from 'vue';
 import PrimaryButton from './components/buttons/PrimaryButton.vue';
 import SecondaryButton from './components/buttons/SecondaryButton.vue';
-import BaseDialog from './components/dialog/BaseDialog.vue';
+import MyDialog from './components/dialog/MyDialog.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     PrimaryButton,
     SecondaryButton,
-    BaseDialog,
+    MyDialog,
   },
   setup() {
     const handleClick = () => {
