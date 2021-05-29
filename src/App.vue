@@ -45,7 +45,7 @@
         </MyDialog>
       </div>
       <div class="mb-2">
-        <PrimaryButton @click="switchDialog">ダイアログ</PrimaryButton>
+        <PrimaryButton @click="switchDialog">open</PrimaryButton>
       </div>
     </div>
   </div>

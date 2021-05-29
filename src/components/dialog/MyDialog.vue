@@ -26,13 +26,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, watchEffect } from 'vue';
+import { defineComponent, watchEffect } from 'vue';
 
 export default defineComponent({
   name: 'MyDialog',
   props: {
     visible: {
-      type: Boolean as PropType<boolean>,
+      type: Boolean,
       required: true,
     },
   },
