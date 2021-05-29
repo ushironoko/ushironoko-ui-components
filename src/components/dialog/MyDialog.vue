@@ -2,7 +2,18 @@
   <teleport v-if="visible" to="body">
     <div
       :bind="$attrs"
-      class="fixed top-0 left-0 flex items-start justify-center w-screen h-screen overflow-y-scroll backdrop-filter backdrop-blur-md"
+      class="
+        fixed
+        top-0
+        left-0
+        flex
+        items-start
+        justify-center
+        w-screen
+        h-screen
+        overflow-y-scroll
+        backdrop-filter backdrop-blur-md
+      "
       @click.stop="clickBackDrop"
     >
       <section
@@ -42,16 +53,16 @@ export default defineComponent({
       emit('backdropClicked');
     };
 
-  watchEffect(onInvalidate => {
-      if (!props.visible) return
+    watchEffect((onInvalidate) => {
+      if (!props.visible) return;
 
-      const overflow = document.documentElement.style.overflow
-      document.documentElement.style.overflow = 'hidden'
+      const overflow = document.documentElement.style.overflow;
+      document.documentElement.style.overflow = 'hidden';
 
       onInvalidate(() => {
-        document.documentElement.style.overflow = overflow
-      })
-    })
+        document.documentElement.style.overflow = overflow;
+      });
+    });
 
     return {
       clickBackDrop,

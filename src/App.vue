@@ -1,51 +1,47 @@
 <template>
   <div class="m-4">
+    <ButtonSample @click="handleClick" />
+    <DialogSamples />
     <div>
-      <p class="mb-2 text-2xl">Buttons</p>
-      <div class="mb-2">
-        <PrimaryButton @click="handleClick">Primary</PrimaryButton>
+      <p class="mb-2 text-2xl">Forms</p>
+      <div class="w-80">
+        <InputText
+          v-model:value="inputTextValue"
+          placeholder="placeholder"
+          label="InputText with v-model"
+        />
       </div>
-      <div class="mb-2">
-        <PrimaryButton :disabled="true" @click="handleClick">Primary Disabled</PrimaryButton>
+      <div class="w-80">
+        <InputText
+          :value="inputTextValue"
+          placeholder="placeholder"
+          label="InputText with event handler"
+          @input="handleInputText"
+        />
       </div>
-      <div class="mb-2">
-        <SecondaryButton @click="handleClick">Secondary</SecondaryButton>
+      <div class="w-80">
+        <InputText :disabled="true" label="disabled" />
       </div>
-      <div class="mb-2">
-        <SecondaryButton :disabled="true" @click="handleClick">Secondary Disabled</SecondaryButton>
+      <div class="w-80">
+        <InputText v-model:value="inputTextValue" :is-error="true" label="error" />
       </div>
-      <div class="mb-2">
-        <SecondaryButton
-          href="http://example.com"
-          target="_blank"
-          rel="noopener"
-          @click="handleClick"
-          >Secondary Link</SecondaryButton
-        >
-      </div>
-    </div>
-
-    <div>
-      <p class="mb-2 text-2xl">Dialogs</p>
       <div>
-        <MyDialog :visible="dialogVisible" @backdrop-clicked="switchDialog">
-          <template #title>
-            <p class="font-bold">ダイアログ</p>
-          </template>
-          <template #body>
-            本文を記述します
-            本文を記述します
-            本文を記述します
-            本文を記述します
-            本文を記述します
-          </template>
-          <template #footer>
-            <div class="flex justify-end"><SecondaryButton @click="switchDialog">close</SecondaryButton></div>
-          </template>
-        </MyDialog>
+        <InputText v-model:value="inputTextValue" label="width full" />
       </div>
-      <div class="mb-2">
-        <PrimaryButton @click="switchDialog">open</PrimaryButton>
+      <div class="w-80">
+        <InputText v-model:value="inputNumberValue" type="number" label="number" />
+      </div>
+      <div class="w-80">
+        <InputText v-model:value="inputPasswordValue" type="password" label="password" />
+      </div>
+      <div class="w-80">
+        <InputText v-model:value="inputEmailValue" type="email" label="email" />
+      </div>
+      <div class="w-80">
+        <InputText v-model:value="inputTelValue" type="tel" label="tel" />
+      </div>
+      <div class="w-80">
+        <InputText v-model:value="inputDateValue" type="date" label="date" />
       </div>
     </div>
   </div>
@@ -53,31 +49,40 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import PrimaryButton from './components/buttons/PrimaryButton.vue';
-import SecondaryButton from './components/buttons/SecondaryButton.vue';
-import MyDialog from './components/dialog/MyDialog.vue';
+import ButtonSample from './components/buttons/ButtonSample.vue';
+import DialogSamples from './components/dialog/DialogSamples.vue';
+import InputText from './components/forms/InputText.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    PrimaryButton,
-    SecondaryButton,
-    MyDialog,
+    ButtonSample,
+    DialogSamples,
+    InputText,
   },
   setup() {
     const handleClick = () => {
       alert('clicked');
     };
 
-    const dialogVisible = ref(false)
-    const switchDialog = () => {
-      dialogVisible.value = !dialogVisible.value
-    }
+    const inputTextValue = ref('');
+    const handleInputText = (value: string) => (inputTextValue.value = value);
+
+    const inputNumberValue = ref('0');
+    const inputPasswordValue = ref('');
+    const inputEmailValue = ref('');
+    const inputTelValue = ref('');
+    const inputDateValue = ref('');
 
     return {
       handleClick,
-      dialogVisible,
-      switchDialog,
+      inputTextValue,
+      handleInputText,
+      inputNumberValue,
+      inputPasswordValue,
+      inputEmailValue,
+      inputTelValue,
+      inputDateValue,
     };
   },
 });
