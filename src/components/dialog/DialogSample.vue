@@ -29,6 +29,7 @@ import SecondaryButton from '../buttons/SecondaryButton.vue';
 import MyDialog from './MyDialog.vue';
 
 export default defineComponent({
+  name: 'DialogSamle',
   components: {
     PrimaryButton,
     SecondaryButton,

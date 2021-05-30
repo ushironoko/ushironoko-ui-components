@@ -1,15 +1,6 @@
 <template>
   <div
-    class="
-      relative
-      inline-block
-      w-full
-      overflow-hidden
-      border-2 border-gray-300 border-solid
-      rounded-md
-      text-gray-80
-      h-14
-    "
+    class="relative inline-block w-full overflow-hidden border-2 border-gray-300 border-solid rounded-md  text-gray-80 h-14 focus:"
     :class="`${focusedClass} ${errorClass} ${disabledLabelClass}`"
   >
     <label class="relative flex items-center h-full px-2 cursor-text">
@@ -23,7 +14,7 @@
         :value="value"
         :placeholder="isFocus ? placeholder : ''"
         :disabled="disabled"
-        :bind="$attrs"
+        v-bind="$attrs"
         v-on="listeners"
       />
     </label>
@@ -35,7 +26,6 @@ import { defineComponent, computed, PropType, ref } from 'vue';
 
 export default defineComponent({
   name: 'InputText',
-  inheritAttrs: false,
   props: {
     value: {
       type: String,

@@ -33,8 +33,10 @@ export default defineComponent({
     SecondaryButton,
   },
   emits: ['click'],
-  setup(_, { emit }) {
-    const handleClick = () => emit('click');
+  setup() {
+    const handleClick = () => {
+      alert('clicked');
+    };
 
     return {
       handleClick,
