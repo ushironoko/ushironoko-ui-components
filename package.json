@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "tsc": "vue-tsc --noEmit",
-    "build": "npm run tsc && vite build",
+    "build": "npm run tsc && npm run test && vite build",
     "serve": "vite preview",
     "test": "jest"
   },
