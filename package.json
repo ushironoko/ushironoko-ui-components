@@ -1,6 +1,8 @@
 {
   "name": "my-ui-components",
   "version": "0.0.0",
+  "repository": "https://github.com/ushironoko/my-ui-components.git",
+  "author": "ushironoko",
   "scripts": {
     "dev": "vite",
     "tsc": "vue-tsc --noEmit",
