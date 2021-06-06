@@ -11,6 +11,10 @@
   },
   "module": "./dist/ushironoko-components.es.js",
   "main": "./dist/ushironoko-components.umd.js",
+  "files": [
+    "dist",
+    "stc/*"
+  ],
   "exports": {
     ".": {
       "import": "./src/index.ts",
