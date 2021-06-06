@@ -9,6 +9,13 @@
   },
   "module": "./dist/my-components.es.js",
   "main": "./dist/my-components.umd.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    },
+    "./style": "./dist/style.css"
+  },
   "peerDependencies": {
     "vue": "^3.0.5",
     "@vue/compiler-sfc": "^3.0.5"
