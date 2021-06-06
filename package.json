@@ -17,10 +17,6 @@
     "src/*"
   ],
   "exports": {
-    ".": {
-      "import": "./dist/ushironoko-components.es.js",
-      "require": "./dist/ushironoko-components.umd.js"
-    },
     "./style": "./dist/style.css"
   },
   "peerDependencies": {
