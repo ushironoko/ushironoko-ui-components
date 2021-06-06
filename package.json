@@ -5,8 +5,17 @@
     "dev": "vite",
     "tsc": "vue-tsc --noEmit",
     "build": "npm run tsc && vite build",
-    "build:module": "npm run tsc && vite build --config vite.config.library.ts",
     "serve": "vite preview"
+  },
+  "module": "./dist/my-components.es.js",
+  "main": "./dist/my-components.umd.js",
+  "files": [
+    "dist",
+    "src/index.ts"
+  ],
+  "peerDependencies": {
+    "vue": "^3.0.5",
+    "@vue/compiler-sfc": "^3.0.5"
   },
   "dependencies": {
     "axios": "^0.21.1",
