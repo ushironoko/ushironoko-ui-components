@@ -1,5 +1,5 @@
 {
-  "name": "my-ui-components",
+  "name": "ushironoko-ui-components",
   "version": "0.1.0",
   "repository": "https://github.com/ushironoko/my-ui-components.git",
   "author": "ushironoko",
@@ -9,8 +9,8 @@
     "build": "npm run tsc && vite build",
     "serve": "vite preview"
   },
-  "module": "./dist/my-components.es.js",
-  "main": "./dist/my-components.umd.js",
+  "module": "./dist/ushironoko-components.es.js",
+  "main": "./dist/ushironoko-components.umd.js",
   "exports": {
     ".": {
       "import": "./src/index.ts",

@@ -10,7 +10,7 @@ const options = {
       : {
           lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
-            name: 'my-ui-components'
+            name: 'ushironoko-ui-components'
           },
           rollupOptions: {
             external: ['vue'],
