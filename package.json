@@ -14,7 +14,7 @@
   "main": "./dist/ushironoko-ui-components.umd.js",
   "files": [
     "dist",
-    "src/*"
+    "src/index.ts"
   ],
   "exports": {
     ".": {
