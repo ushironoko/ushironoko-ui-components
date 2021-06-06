@@ -13,7 +13,7 @@
   "main": "./dist/ushironoko-components.umd.js",
   "files": [
     "dist",
-    "stc/*"
+    "src/*"
   ],
   "exports": {
     ".": {
