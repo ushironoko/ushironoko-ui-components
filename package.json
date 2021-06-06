@@ -10,16 +10,16 @@
     "serve": "vite preview"
   },
   "types": "src/index.ts",
-  "module": "./dist/ushironoko-components.es.js",
-  "main": "./dist/ushironoko-components.umd.js",
+  "module": "./dist/ushironoko-ui-components.es.js",
+  "main": "./dist/ushironoko-ui-components.umd.js",
   "files": [
     "dist",
     "src/*"
   ],
   "exports": {
     ".": {
-      "import": "./dist/ushironoko-components.es.js",
-      "require": "./dist/ushironoko-components.umd.js"
+      "import": "./dist/ushironoko-ui-components.es.js",
+      "require": "./dist/ushironoko-ui-components.umd.js"
     },
     "./style": "./dist/style.css"
   },
