@@ -5,11 +5,11 @@
     "dev": "vite",
     "tsc": "vue-tsc --noEmit",
     "build": "npm run tsc && vite build",
+    "build:module": "npm run tsc && vite build --config vite.config.library.ts",
     "serve": "vite preview"
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "msw": "^0.29.0",
     "vue": "^3.0.5"
   },
   "devDependencies": {
@@ -21,6 +21,7 @@
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^7.9.0",
+    "msw": "^0.29.0",
     "postcss": "^8.3.0",
     "postcss-nested": "^5.0.5",
     "prettier": "^2.3.0",
