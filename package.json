@@ -1,7 +1,7 @@
 {
   "name": "ushironoko-ui-components",
   "version": "0.1.0",
-  "repository": "https://github.com/ushironoko/my-ui-components.git",
+  "repository": "https://github.com/ushironoko/ushironoko-ui-components.git",
   "author": "ushironoko",
   "scripts": {
     "dev": "vite",
