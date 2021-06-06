@@ -9,6 +9,7 @@
     "build": "npm run tsc && vite build",
     "serve": "vite preview"
   },
+  "types": "src/index.ts",
   "module": "./dist/ushironoko-components.es.js",
   "main": "./dist/ushironoko-components.umd.js",
   "files": [
