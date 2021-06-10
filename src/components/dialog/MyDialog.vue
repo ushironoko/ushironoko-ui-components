@@ -2,11 +2,11 @@
   <teleport v-if="visible" to="body">
     <div
       v-bind="$attrs"
-      class="fixed top-0 left-0 flex items-start justify-center w-screen h-screen overflow-y-scroll  backdrop-filter backdrop-blur-md"
+      class="fixed top-0 left-0 flex items-start justify-center w-screen h-screen overflow-y-scroll backdrop-filter backdrop-blur-md"
       @click.stop="clickBackDrop"
     >
       <section
-        class="box-border max-w-screen-sm p-3 mx-2 my-16 bg-white shadow-xl rounded-20"
+        class="box-border max-w-screen-sm p-3 mx-2 my-16 bg-white shadow-xl"
         @click.stop
       >
         <header>
