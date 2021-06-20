@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative inline-block w-full overflow-hidden border-2 border-gray-300 border-solid rounded-md text-gray-80 h-14 focus:"
+    class="relative inline-block w-full overflow-hidden border-2 border-gray-300 border-solid rounded-md text-gray-80 h-14"
     :class="`${focusedClass} ${errorClass} ${disabledLabelClass}`"
   >
     <label class="relative flex items-center h-full px-2 cursor-text">
