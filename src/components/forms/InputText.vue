@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative inline-block w-full overflow-hidden border-2 border-gray-300 border-solid rounded-md text-gray-80 h-14"
+    class="relative inline-block w-full overflow-hidden border-2 border-solid rounded-md text-gray-80 h-14"
     :class="`${focusedClass} ${errorClass} ${disabledLabelClass}`"
   >
     <label class="relative flex items-center h-full px-2 cursor-text">
@@ -86,7 +86,7 @@ export default defineComponent({
     );
 
     const focusedClass = computed(() =>
-      isFocus.value ? 'border-blue-700 ring-blue-100 transition duration-100' : ''
+      isFocus.value ? 'border-blue-700 ring-4 ring-blue-100 transition duration-100' : 'border-gray-300 '
     );
 
     const listeners = computed(() => ({
