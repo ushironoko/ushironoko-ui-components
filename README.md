@@ -1,27 +1,35 @@
-# Vue 3 + Typescript + Vite
+# CHAPTER 05 UIコンポーネントライブラリで学ぶVue v3 サンプルコード
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+このリポジトリは Vue.jsビギナーズガイド 3.x 対応 内に記載されている CHAPTER 05 UIコンポーネントライブラリで学ぶVue v3 のサンプルコードです。CHAPTER 05の作業をすべて行うとこのリポジトリにあるものと同様のものになります。
 
-## Recommended IDE Setup
+動作を確認したい場合は、リポジトリをクローンして以下のコマンドをお使いのターミナルにて実行してください。
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+ライブラリのインストール
 
-### If Using `<script setup>`
+```shell
+yarn install
+```
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+サンプル一覧の立ち上げ
 
-## Type Support For `.vue` Imports in TS
+```shell
+yarn dev
+```
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
+ライブラリモードでのバンドル生成
 
-### If Using Volar
+```shell
+yarn build
+```
 
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
+ユニットテストの実行
 
-### If Using Vetur
+```shell
+yarn test
+```
 
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
+## ライブラリバージョンについて
+
+本リポジトリで扱っているライブラリのバージョンは package-lock.json によって固定されています。ライブラリのバージョンアップなどを取り入れ、本書の内容が変わった際は、別のリポジトリにてサンプルコードを作る予定です。
+
+
