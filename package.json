@@ -6,17 +6,19 @@
   "scripts": {
     "dev": "vite",
     "tsc": "vue-tsc --noEmit",
-    "build": "npm run tsc && npm run test && vite build",
+    "dts": "vue-tsc --project tsconfig.dts.json",
+    "build": "npm run tsc && npm run test && vite build && npm run dts",
     "serve": "vite preview",
     "test": "jest"
   },
-  "types": "src/index.ts",
+  "types": "types/index.d.ts",
   "module": "./dist/ushironoko-ui-components.es.js",
   "main": "./dist/ushironoko-ui-components.umd.js",
   "files": [
     "dist",
     "src/index.ts",
-    "src/components/*"
+    "src/components/*",
+    "types/*"
   ],
   "exports": {
     ".": {
@@ -56,7 +58,7 @@
     "typescript": "^4.1.3",
     "vite": "^2.3.4",
     "vue-jest": "5.0.0-alpha.10",
-    "vue-tsc": "^0.1.6"
+    "vue-tsc": "^0.28.10"
   },
   "msw": {
     "workerDirectory": "public"
