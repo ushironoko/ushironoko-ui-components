@@ -10,7 +10,7 @@
     "esModuleInterop": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "outDir": "typs",
+    "outDir": "types",
     "types": ["@types/jest"],
     "lib": ["ES2020", "dom"]
   },
